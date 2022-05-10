@@ -1,13 +1,13 @@
 <div class="container">
 <div class="row">
-    <p class="text-success"><%= flash[:notice] %></p>
-    <div class="col-log-3">
-     <%= render 'users/user', user: @user, book: @book %>
-</div>
-<div class="col-log-9">
+    <div class="col-md-3">
+     <%= render 'users/user', user: @user, book: @new_book %>
+    </div>
+<div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
       <table class="table">
         <tr>
+          <td><%#= attached_image_tag @user, :profile_image, fill, 30, 30, fallback: "no_image.jpg" %></td>
           <td>
             <%= link_to user_path(@user.id) do %>
               <%= @user.name %>
@@ -23,3 +23,4 @@
       </table>
 </div>
 </div>
+</dv>
